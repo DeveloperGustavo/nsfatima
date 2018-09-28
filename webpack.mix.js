@@ -17,3 +17,5 @@ mix.js('resources/js/app.js', 'public/js')
 mix.js('node_modules/jquery-mask-plugin', 'public');
 
 mix.js('node_modules/jquery', 'public');
+
+mix.js('node_modules/vanilla-masker', 'public');

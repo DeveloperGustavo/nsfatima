@@ -31,6 +31,17 @@ class PeopleController extends Controller
     }
 
     public function update(Request $request, $id){
+        $request->validate([
+            'nome' => 'required',
+            'rg' => 'required',
+            'cpf' => 'required',
+            'cep' => 'required',
+            'endereco' => 'required',
+            'num' => 'required',
+            'bairro' => 'required',
+            'uf' => 'required',
+            'cidade' => 'required',
+        ]);
         People::where('id', $id)
             ->update([
                 'nome' => $request->nome,
